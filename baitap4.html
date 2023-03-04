@@ -29,7 +29,7 @@
 <p id="sum-parity"></p>
 </body>
 <script>
-    function parity_check(n) {
+    function prime_check(n) {
         // Nếu n bé hơn 2 tức là không phải số nguyên tố
         if (n < 2) {
             return false
@@ -55,20 +55,20 @@
         let sumEven = 0;
         let sumParity = 0;
         let evenNum = 0;
-        let parityNum = 0;
+        let primeNum = 0;
         for (let i = 0; i < n; i++) {
             if (arr[i] % 2 == 0) {
                 sumEven += arr[i];
                 evenNum++;
             }
-            if (parity_check(arr[i]) == true) {
+            if (prime_check(arr[i]) == true) {
                 sumParity += arr[i];
-                parityNum ++;
+                primeNum ++;
             }
         }
         $("#display").html(arr.join(","));
         $("#sum-even").html("Số lượng các số chẵn là " + evenNum + "; Tổng = " + sumEven)
-        $("#sum-parity").html("Số lượng các số nguyên tố là " + parityNum + "; Tổng = " + sumParity)
+        $("#sum-parity").html("Số lượng các số nguyên tố là " + primeNum + "; Tổng = " + sumParity)
     })
 </script>
 </html>
